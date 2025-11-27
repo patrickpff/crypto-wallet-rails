@@ -24,6 +24,9 @@
   <div>
     <%= form.label :url_image, style: "display: block" %>
     <%= form.text_field :url_image %>
+    <% if coin.url_image.present? %>
+      <%= image_tag coin.url_image, size: "32x32", alt: coin.acronym %>
+    <% end %>
   </div>
 
   <div>

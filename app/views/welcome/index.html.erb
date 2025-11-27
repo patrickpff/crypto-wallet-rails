@@ -1,2 +1,26 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome to <%= app_name %></h1>
+
+<p>
+    <strong>Today:</strong> <%= date_br(Date.today) %>
+</p>
+
+<p>
+    Patrick Ferreira
+</p>
+
+<p>
+    Software Engineer
+</p>
+
+<ul>
+    <li>
+        <%= link_to "Coins", coins_path %>
+    </li>
+    <li>
+        <%= link_to "Github", "https://github.com/patrickpff", target: "__blank" %>
+    </li>
+    <li>
+        <%= link_to "LinkedIn", "https://www.linkedin.com/in/parickpff", target: "__blank" %>
+    </li>
+    <li><a href=""></a></li>
+</ul>
