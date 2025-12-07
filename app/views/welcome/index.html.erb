@@ -1,26 +1,19 @@
 <h1>Welcome to <%= app_name %></h1>
 
+<%= render "menu" %>
+
 <p>
     <strong>Today:</strong> <%= date_br(Date.today) %>
 </p>
 
 <p>
-    Patrick Ferreira
+    This application was developed as part of the course <em><%= @course %></em>.
+</p>
+
+<p>
+    Developed by <strong><%= @author %></strong> (<strong><%= @name %></strong>)
 </p>
 
 <p>
     Software Engineer
 </p>
-
-<ul>
-    <li>
-        <%= link_to "Coins", coins_path %>
-    </li>
-    <li>
-        <%= link_to "Github", "https://github.com/patrickpff", target: "__blank" %>
-    </li>
-    <li>
-        <%= link_to "LinkedIn", "https://www.linkedin.com/in/parickpff", target: "__blank" %>
-    </li>
-    <li><a href=""></a></li>
-</ul>
