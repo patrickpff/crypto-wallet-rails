@@ -45,3 +45,5 @@ Coin.create!(
   acronym: "BNB",
   url_image: "https://cryptologos.cc/logos/bnb-bnb-logo.png"
 )
+
+puts "Finished seeding Coins."
