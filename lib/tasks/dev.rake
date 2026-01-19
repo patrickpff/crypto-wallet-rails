@@ -19,17 +19,21 @@ namespace :dev do
     }
 
     tasks.each do |description, rake_task|
-      spinner = multi.register("[:spinner] #{description}...", format: :dots)
-      spinner.auto_spin
-      begin
+      with_spinner(multi, description) do 
         %x(rails #{rake_task})
-        spinner.success("(Done)")
-      rescue => e
-        spinner.error("(Failed)")
-        puts "Error during #{description.downcase}: #{e.message}"
-      ensure
-        Rake::Task[rake_task].reenable
       end
+    end
+  end
+
+  def with_spinner(multi, description)
+    spinner = multi.register("[:spinner] #{description}...", format: :dots)
+    spinner.auto_spin
+    begin
+      yield
+      spinner.success("(Done)")
+    rescue => e
+      spinner.error("(Failed)")
+      puts "Error during #{description.downcase}: #{e.message}"
     end
   end
 
