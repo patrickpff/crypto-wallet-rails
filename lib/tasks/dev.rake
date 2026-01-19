@@ -25,6 +25,7 @@ namespace :dev do
     end
   end
 
+  private
   def with_spinner(multi, description)
     spinner = multi.register("[:spinner] #{description}...", format: :dots)
     spinner.auto_spin

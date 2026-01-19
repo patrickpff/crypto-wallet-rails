@@ -10,40 +10,57 @@
 
 puts "Seeding Coins..."
 
-Coin.create!(
-  description: "Bitcoin",
-  acronym: "BTC",
-  url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
-)
+coins = [
+  {
+    description: "Bitcoin",
+    acronym: "BTC",
+    url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+  },
+  {
+    description: "Ethereum",
+    acronym: "ETH",
+    url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"
+  },
+  {
+    description: "Litecoin",
+    acronym: "LTC",
+    url_image: "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
+  },
+  {
+    description: "Ripple",
+    acronym: "XRP",
+    url_image: "https://cryptologos.cc/logos/xrp-xrp-logo.png"
+  },
+  {
+    description: "Binance Coin",
+    acronym: "BNB",
+    url_image: "https://cryptologos.cc/logos/bnb-bnb-logo.png"
+  }
+]
 
-Coin.create!(
-  description: "Ethereum",
-  acronym: "ETH",
-  url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"
-)
-
-Coin.create!(
-  description: "Dash",
-  acronym: "DASH",
-  url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"
-)
-
-Coin.create!(
-  description: "Litecoin",
-  acronym: "LTC",
-  url_image: "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
-)
-
-Coin.create!(
-  description: "Ripple",
-  acronym: "XRP",
-  url_image: "https://cryptologos.cc/logos/xrp-xrp-logo.png"
-)
-
-Coin.create!(
-  description: "Binance Coin",
-  acronym: "BNB",
-  url_image: "https://cryptologos.cc/logos/bnb-bnb-logo.png"
-)
+coins.each do |coin|
+  Coin.find_or_create_by!(coin)
+end
 
 puts "Finished seeding Coins."
+
+puts "Seeding Mining Types..."
+
+mining_types = [
+  { description: "Proof of Work", acronym: "PoW" },
+  { description: "Proof of Stake", acronym: "PoS" },
+  { description: "Delegated Proof of Stake", acronym: "DPoS" },
+  { description: "Proof of Authority", acronym: "PoA" },
+  { description: "Proof of Space", acronym: "PoSpace" }
+]
+
+mining_types.each do |mining_type|
+  MiningType.find_or_create_by!(mining_type)
+end
+
+puts "Finished seeding Mining Types."
