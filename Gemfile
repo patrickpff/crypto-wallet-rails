@@ -35,6 +35,9 @@ gem "bootsnap", require: false
 gem "pry-rails", require: false
 gem "tty-spinner", require: false
 
+# Internationalization and localization support
+gem 'rails-i18n', '~> 8.0.0'
+
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "kamal", require: false
 
