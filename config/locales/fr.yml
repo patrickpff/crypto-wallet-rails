@@ -1,0 +1,14 @@
+fr:
+  hello: "Bonjour le monde"
+  links:
+    edit: "Modifier"
+    show: "Afficher"
+    delete: "Supprimer"
+    back: "Retour"
+    about: "À propos"
+    confirm: "Êtes-vous sûr?"
+    mining_types: "Types de Minage"
+    coins: "Pièces"
+    new_coin: "Nouvelle Pièce"
+    new_mining_type: "Nouveau Type de Minage"
+

@@ -1,10 +1,12 @@
 <h1>Welcome to <%= app_name %></h1>
-<p>Selected language is: <strong><%= locale(I18n.locale) %></strong></p>
+<p>Selected language is: <strong><%= locale %></strong></p>
+
+<p><%= I18n.t('hello') %><p>
 
 <%= render "menu" %>
 
 <p>
-    <strong>Today:</strong> <%= date_br(Date.today) %>
+    <strong>Today:</strong> <%= I18n.l(Date.today) %>
 </p>
 
 <p>
@@ -12,7 +14,7 @@
 </p>
 
 <p>
-    Developed by <strong><%= @author %></strong> (<strong><%= @name %></strong>)
+    Developed by <strong><%= @author %></strong>
 </p>
 
 <p>

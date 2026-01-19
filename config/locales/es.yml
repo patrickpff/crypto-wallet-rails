@@ -1,0 +1,13 @@
+es:
+  hello: "Hola mundo"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Eliminar"
+    back: "Volver"
+    about: "Acerca de"
+    confirm: "¿Estás seguro?"
+    mining_types: "Tipos de Minería"
+    coins: "Monedas"
+    new_coin: "Nueva Moneda"
+    new_mining_type: "Nuevo Tipo de Minería"

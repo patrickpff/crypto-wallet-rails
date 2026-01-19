@@ -29,3 +29,14 @@
 
 en:
   hello: "Hello world"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    back: "Back"
+    about: "About"
+    confirm: "Are you sure?"
+    mining_types: "Mining Types"
+    coins: "Coins"
+    new_coin: "New Coin"
+    new_mining_type: "New Mining Type"

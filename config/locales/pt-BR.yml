@@ -1,0 +1,13 @@
+pt-BR:
+  hello: "Olá mundo"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Excluir"
+    back: "Voltar"
+    about: "Sobre nós"
+    confirm: "Você tem certeza?"
+    mining_types: "Tipos de Mineração"
+    coins: "Moedas"
+    new_coin: "Nova Moeda"
+    new_mining_type: "Novo Tipo de Mineração"

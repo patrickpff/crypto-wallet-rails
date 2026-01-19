@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def locale(locale)
+  def locale
     if I18n.locale == :en && locale == :en
       "English"
     elsif I18n.locale == :es && locale == :es
