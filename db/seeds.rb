@@ -8,47 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-puts "Seeding Coins..."
-
-coins = [
-  {
-    description: "Bitcoin",
-    acronym: "BTC",
-    url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
-  },
-  {
-    description: "Ethereum",
-    acronym: "ETH",
-    url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"
-  },
-  {
-    description: "Dash",
-    acronym: "DASH",
-    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"
-  },
-  {
-    description: "Litecoin",
-    acronym: "LTC",
-    url_image: "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
-  },
-  {
-    description: "Ripple",
-    acronym: "XRP",
-    url_image: "https://cryptologos.cc/logos/xrp-xrp-logo.png"
-  },
-  {
-    description: "Binance Coin",
-    acronym: "BNB",
-    url_image: "https://cryptologos.cc/logos/bnb-bnb-logo.png"
-  }
-]
-
-coins.each do |coin|
-  Coin.find_or_create_by!(coin)
-end
-
-puts "Finished seeding Coins."
-
 puts "Seeding Mining Types..."
 
 mining_types = [
@@ -64,3 +23,51 @@ mining_types.each do |mining_type|
 end
 
 puts "Finished seeding Mining Types."
+
+
+puts "Seeding Coins..."
+
+coins = [
+  {
+    description: "Bitcoin",
+    acronym: "BTC",
+    url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoW")
+  },
+  {
+    description: "Ethereum",
+    acronym: "ETH",
+    url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoS")
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoW")
+  },
+  {
+    description: "Litecoin",
+    acronym: "LTC",
+    url_image: "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoW")
+  },
+  {
+    description: "Ripple",
+    acronym: "XRP",
+    url_image: "https://cryptologos.cc/logos/xrp-xrp-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoA")
+  },
+  {
+    description: "Binance Coin",
+    acronym: "BNB",
+    url_image: "https://cryptologos.cc/logos/bnb-bnb-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoS")
+  }
+]
+
+coins.each do |coin|
+  Coin.find_or_create_by!(coin)
+end
+
+puts "Finished seeding Coins."
