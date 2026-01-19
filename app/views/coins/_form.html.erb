@@ -30,6 +30,11 @@
   </div>
 
   <div>
+    <%= form.label :mining_type_id, "Mining Type", style: "display: block" %>
+    <%= form.select :mining_type_id, options_for_select(@mining_types_options, coin.mining_type_id), prompt: "Select Mining Type", include_blank: "Select Mining Type" %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
