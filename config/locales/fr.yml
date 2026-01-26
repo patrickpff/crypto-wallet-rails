@@ -1,4 +1,5 @@
 fr:
+  actual_locale: "Français"
   hello: "Bonjour le monde"
   links:
     edit: "Modifier"

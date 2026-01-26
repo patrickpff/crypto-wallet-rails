@@ -1,4 +1,5 @@
 es:
+  actual_locale: "Español"
   hello: "Hola mundo"
   links:
     edit: "Editar"
