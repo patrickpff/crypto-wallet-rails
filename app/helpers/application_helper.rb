@@ -1,17 +1,17 @@
 module ApplicationHelper
   def locale
-    if I18n.locale == :en && locale == :en
+    if I18n.locale == :en
       "English"
-    elsif I18n.locale == :es && locale == :es
+    elsif I18n.locale == :es
       "Español"
-    elsif I18n.locale == :fr && locale == :fr
+    elsif I18n.locale == :fr
       "Français"
-    elsif I18n.locale == :de && locale == :de
+    elsif I18n.locale == :de
       "Deutsch"
-    elsif I18n.locale.to_s == "pt-BR" && locale.to_s == "pt-BR"
+    elsif I18n.locale.to_s == "pt-BR"
       "Português (Brasil)"
     else
-      link_to locale_name(locale), url_for(locale: locale)
+      link_to locale_name(I18n.locale), url_for(locale: I18n.locale)
     end
   end
 

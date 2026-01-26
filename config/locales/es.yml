@@ -11,3 +11,4 @@ es:
     coins: "Monedas"
     new_coin: "Nueva Moneda"
     new_mining_type: "Nuevo Tipo de Minería"
+    confirmation: "¿Estás seguro?"

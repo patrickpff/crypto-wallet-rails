@@ -11,4 +11,4 @@ fr:
     coins: "Pièces"
     new_coin: "Nouvelle Pièce"
     new_mining_type: "Nouveau Type de Minage"
-
+    confirmation: "Êtes-vous sûr?"
