@@ -2,11 +2,11 @@ en:
   activerecord:
     models:
       coin: 
-        One: Coin
-        Other: Coins
+        one: Coin
+        other: Coins
       mining_type:
-        One: Mining Type
-        Other: Mining Types
+        one: Mining Type
+        other: Mining Types
     attributes:
       coin:
         id: ID
