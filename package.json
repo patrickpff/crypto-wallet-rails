@@ -1,0 +1,11 @@
+{
+  "name": "crypto-wallet-rails",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:patrickpff/crypto-wallet-rails.git",
+  "author": "Patrick Pierre Fernandes Ferreira <patrickpierreff@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^4.0.0"
+  }
+}
